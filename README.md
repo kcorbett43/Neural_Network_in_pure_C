@@ -62,4 +62,4 @@ make clean && make all
 ```
 
 ### Acknowledgements
-This built during Profesor Andrew Siegel's High Performance Computing course.
+This was built during Profesor Andrew Siegel's High Performance Computing course.

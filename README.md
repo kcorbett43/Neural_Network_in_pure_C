@@ -46,7 +46,7 @@ make clean && make all
 ```
 ## Results and Discussion
 
-### Milestone 1
+### Implementation 1
 
 Initial implementation achieved **90.3 % accuracy** with the following metrics:
 
@@ -63,7 +63,7 @@ This baseline demonstrated functional correctness but revealed opportunities for
 
 ---
 
-### Milestone 2
+### Implementation 2
 
 After extensive refactoring—fixing matrix transposition, dimensional mismatches, and delta accumulation—accuracy again reached **> 90 %**, with far better runtime across optimized versions.
 

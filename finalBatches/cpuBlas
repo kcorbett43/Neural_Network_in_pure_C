@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name=blas                   # Job name
+#SBATCH --nodes=1                         # Request 1 node
+#SBATCH --ntasks=1                        # Request 1 task (job step)
+#SBATCH --cpus-per-task=1                # Number of cores per processor
+#SBATCH --ntasks-per-node=1
+# #SBATCH --exclusive                     # Exclusive access to the node
+#SBATCH --time=00:20:00                   # Time limit (hh:mm:ss)
+#SBATCH --partition=caslake               # Specify partition if needed
+#SBATCH --output=batchOutputs/blas.out     # File for standard output
+#SBATCH --error=batchOutputs/blas.err      # File for standard error
+#SBATCH --account=mpcs51087               # File for standard output
+
+module load gcc
+module load gsl
+module load openblas
+gcc cpuBlas.c -o cpuBlasX -O3 -ffast-math -lm -lgsl -lopenblas -DHAVE_OPENBLAS
+chmod +x cpuBlasX
+srun ./cpuBlasX

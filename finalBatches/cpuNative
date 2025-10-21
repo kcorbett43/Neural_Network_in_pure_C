@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name=cpuNative                   # Job name
+#SBATCH --nodes=1                         # Request 1 node
+#SBATCH --ntasks=1                        # Request 1 task (job step)
+#SBATCH --cpus-per-task=1                # Number of cores per processor
+#SBATCH --ntasks-per-node=16
+# #SBATCH --exclusive                     # Exclusive access to the node
+#SBATCH --time=00:20:00                   # Time limit (hh:mm:ss)
+#SBATCH --partition=caslake               # Specify partition if needed
+#SBATCH --output=batchOutputs/cpuNative.out     # File for standard output
+#SBATCH --error=batchOutputs/cpuNative.err      # File for standard error
+#SBATCH --account=mpcs51087               # File for standard output
+
+module load gcc
+module load gsl
+module load openblas
+gcc cpuBlas.c -o cpuNativeX -O3 -ffast-math -lm -lgsl -lgslcblas -fopenmp
+chmod +x cpuNativeX
+srun ./cpuNativeX

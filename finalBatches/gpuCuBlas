@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --job-name=gpuCuBlas                  # Job name
+#SBATCH --nodes=1                         # Request 1 node
+#SBATCH --ntasks=1                        # Request 1 task (job step)
+#SBATCH --cpus-per-task=1                # Number of cores per processor
+# #SBATCH --exclusive                     # Exclusive access to the node
+#SBATCH --time=00:03:00                   # Time limit (hh:mm:ss)
+#SBATCH --partition=gpu               # Specify partition if needed
+#SBATCH --output=batchOutputs/gpuCuBlas.out     # File for standard output
+#SBATCH --error=batchOutputs/gpuCuBlas.err      # File for standard error
+#SBATCH --account=mpcs51087               # File for standard output
+#SBATCH --constraint=a100
+#SBATCH --gres=gpu:1
+
+module load cuda
+module load gcc
+module load gsl
+nvcc -arch=compute_80 gpuBlas.cu -o gpuCuBlasX -lm -lgsl -lgslcblas -lcublas -DHAVE_CUBLAS -O3
+chmod +x gpuCuBlasX
+srun ./gpuCuBlasX

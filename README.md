@@ -103,12 +103,7 @@ After extensive refactoring—fixing matrix transposition, dimensional mismatche
 
 **Loss Curves**
 
-| | |
-|:--:|:--:|
-| ![CPU Native](plotting/cpu_native_loss.png) | ![CPU BLAS](plotting/cpu_blas_loss.png) |
-| *CPU Native* | *CPU BLAS* |
-| ![GPU Native](plotting/gpu_native_loss.png) | ![GPU cuBLAS](plotting/gpu_cublas_loss.png) |
-| *GPU Native* | *GPU cuBLAS* |
+<img width="730" height="496" alt="image" src="https://github.com/user-attachments/assets/da43fd47-cd45-4240-82a9-0219267c07d3" />
 
 ---
 

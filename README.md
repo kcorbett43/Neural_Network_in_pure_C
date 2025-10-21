@@ -59,8 +59,7 @@ make clean && make all
 # Build GPU cuBLAS version
 cd ../gpuBlas
 make clean && make all
-
----
+```
 
 ### Acknowledgements
 This built during Profesor Andrew Siegel's High Performance Computing course.

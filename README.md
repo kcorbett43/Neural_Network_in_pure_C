@@ -3,19 +3,7 @@ The goal of this project is to explore and implement different versions of a neu
 This provides insight into:  
 - how a basic neural network works under the hood  
 - performance trade-offs between pure code vs. library calls  
-- CPU vs. GPU execution for numerical computing  
----
-
-## Table of Contents  
-- [Project Overview](#project-overview)  
-- [Repository Structure](#repository-structure)  
-- [Getting Started](#getting-started)  
-  - [Dependencies](#dependencies)  
-  - [Build Instructions](#build-instructions)  
-- [Usage](#usage)  
-- [Results](#results)  
-- [Contributing](#contributing)  
-- [License](#license)  
+- CPU vs. GPU execution for numerical computing   
 
 ---
 
@@ -30,9 +18,7 @@ Here’s a high-level overview of the directories:
 - /milestone1/ – Code and materials for Milestone 1
 - /milestone2/ – Code and materials for Milestone 2
 - /finalBatches/ – Final batch-run results
-- /final/ – Final implementation and scripts
 - /plotting/ – Scripts to generate performance/accuracy plots
-- Project_3_ML_Milestone_1_2025.pdf – Project Milestone 1 write-up
 
 ---
 
@@ -60,11 +46,6 @@ make clean && make all
 cd ../gpuBlas
 make clean && make all
 ```
-
-### Acknowledgements
-This was built during Profesor Andrew Siegel's High Performance Computing course.
-
-
 ## Results and Discussion
 
 ### Milestone 1
@@ -107,7 +88,7 @@ After extensive refactoring—fixing matrix transposition, dimensional mismatche
 
 ---
 
-### Final Submission (Optimization Study)
+### Final Results
 
 Final tests on an **A100 GPU** demonstrated near-identical accuracy (~ 0.94) across all architectures, with massive differences in throughput:
 
@@ -122,14 +103,9 @@ Final tests on an **A100 GPU** demonstrated near-identical accuracy (~ 0.94) acr
 
 - **cuBLAS GPU** implementation offered > 3× speedup vs CPU BLAS and ~ 5× vs CPU Native.  
 - Most remaining bottlenecks stem from **CPU–GPU transfer overhead** and **non-optimized I/O**.  
-- Further improvements could include keeping all data resident on-GPU, tuning batch-tile sizes, and integrating additional cuBLAS routines beyond matrix multiplication.
+- Further improvements could include keeping all data resident on-GPU, tuning batch-tile sizes, and integrating additional cuBLAS routines.
 
 ---
 
-### Repository Navigation Recap
-
-- `/final/` – Report and final performance summary  
-- `/finalBatches/` – Executables and batch scripts for all versions  
-- `/blas/`, `/gpu/`, `/gpuBlas/` – Source code and Makefiles  
-- `/plotting/` – Scripts and plots for loss vs epoch curves
-
+### Acknowledgements
+This was built during Profesor Andrew Siegel's High Performance Computing course.

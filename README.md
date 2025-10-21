@@ -15,8 +15,6 @@ Here’s a high-level overview of the directories:
 - /gpu/ – GPU implementation (custom matrix multiplication)
 - /gpuBlas/ – GPU implementation using cuBLAS
 - /include/ – Header files and common definitions
-- /milestone1/ – Code and materials for Milestone 1
-- /milestone2/ – Code and materials for Milestone 2
 - /finalBatches/ – Final batch-run results
 - /plotting/ – Scripts to generate performance/accuracy plots
 

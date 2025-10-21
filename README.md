@@ -22,17 +22,17 @@ This provides insight into:
 ## Repository Structure  
 Here’s a high-level overview of the directories:  
 
-/MNIST/ – Data loader and helper files for the MNIST dataset
-/blas/ – Implementations using BLAS / OpenMP, etc.
-/gpu/ – GPU implementation (custom matrix multiplication)
-/gpuBlas/ – GPU implementation using cuBLAS
-/include/ – Header files and common definitions
-/milestone1/ – Code and materials for Milestone 1
-/milestone2/ – Code and materials for Milestone 2
-/finalBatches/ – Final batch-run results
-/final/ – Final implementation and scripts
-/plotting/ – Scripts to generate performance/accuracy plots
-Project_3_ML_Milestone_1_2025.pdf – Project Milestone 1 write-up
+- /MNIST/ – Data loader and helper files for the MNIST dataset
+- /blas/ – Implementations using BLAS / OpenMP, etc.
+- /gpu/ – GPU implementation (custom matrix multiplication)
+- /gpuBlas/ – GPU implementation using cuBLAS
+- /include/ – Header files and common definitions
+- /milestone1/ – Code and materials for Milestone 1
+- /milestone2/ – Code and materials for Milestone 2
+- /finalBatches/ – Final batch-run results
+- /final/ – Final implementation and scripts
+- /plotting/ – Scripts to generate performance/accuracy plots
+- Project_3_ML_Milestone_1_2025.pdf – Project Milestone 1 write-up
 
 ---
 
